@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script language="javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<title></title>
+<style>
+#maincard{
+margin: auto;
+margin-top: 20px;
+  width: 100%;
+  border: 1px solid black;
+  padding: 15px;
+  background-color: #f5f4f2;
+  display: inline-block;
+}
+#card{
+display: inline-block;
+margin: 10px;
+  width: 100%;
+  border: 1px solid black;
+  background-color: #f5f4f2;
+}
+h5{
+text-align: center;
+}
+h1{
+margin-top: 30px;
+text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Умный вентилятор</h1>
+
+<div style="width: 100%;" class="row"> 
+<div id="maincard" class="card" style="width: 20rem;">
+<label style="margin: 5px;"><h3>Включение свойств</h3></label><br>
+
+<input type="checkbox" class="btn-check" id="btn2" autocomplete="off">
+<label style="margin: 5px;" class="btn btn-outline-primary" for="btn2">скорость</label><br>
+
+<input type="checkbox" class="btn-check" id="btn3" autocomplete="off">
+<label style="margin: 5px;" class="btn btn-outline-primary" for="btn3">угол поворота</label><br>
+
+<input type="checkbox" class="btn-check" id="btn4" autocomplete="off">
+<label style="margin: 5px;" class="btn btn-outline-primary" for="btn4">режим ветра</label><br>
+
+</div>
+</div>
+
+<div name="btnans2" id="card" class="card" style="width: 18rem;">
+	<h5>скорость</h5>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    1 скорость
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label" for="flexRadioDefault2">
+    2 скорость
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+  <label class="form-check-label" for="flexRadioDefault3">
+    3 скорость
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+  <label class="form-check-label" for="flexRadioDefault4">
+    4 скорость
+  </label>
+</div>
+</div>
+
+<div name="btnans3" id="card" class="card" style="width: 18rem;">
+	<h5>угол поворота</h5>
+<div style="margin-left: 40px;" class="slidecontainer">
+  <p>Угол поворота (0-90) градусов:</p>
+  <input type="range" min="1" max="100" value="50">
+</div>
+</div>
+
+<div name="btnans4" id="card" class="card" style="width: 18rem;">
+	<h5>режим ветра</h5>
+  <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Обычный воздух</label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Разный вохдух</label>
+</div>
+</div>
+
+</div>
+<script>
+	$(function() {
+		$('#btn2').on('click', function() {
+		  $('div[name ="btnans2"]') .fadeToggle(200);
+		});	
+		$('#btn3').on('click', function() {
+		  $('div[name ="btnans3"]') .fadeToggle(200);
+		});
+		$('#btn4').on('click', function() {
+		  $('div[name ="btnans4"]') .fadeToggle(200);
+		});
+		$('#btn5').on('click', function() {
+		  $('div[name ="btnans5"]') .fadeToggle(200);
+		});
+	});
+</script>
+</body>
+</html>
